@@ -1,8 +1,10 @@
 # DevSecOps Technical Assessment
 
 ## Overview
-**Duration:** End of the day  - Feb. 17th, 2025
+**Duration:** End of the day - FEB. 17TH, 2025
+
 **Role:** Security Operations Intern  
+
 **Focus Area:** Vulnerability Management & Risk Assessment
 
 ## Background
