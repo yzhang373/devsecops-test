@@ -1,0 +1,24 @@
+Fix CVSS Scores where they are 0 based on Severity
+
+If CVSS is 0, assign a score based on Severity:
+Critical: 9.0
+High: 7.0
+Medium: 4.0
+Low: 2.0
+Ensure Severity Aligns with CVSS Ranges
+
+Critical: 9–10
+High: 7–9
+Medium: 4–7
+Low: 2–4
+Informational: 0–2
+Calculate Priority Score
+
+CVSS Weight: 70% → Later Updated to 100%
+Due Date Weight: 20% (earlier dates get higher priority)
+Asset Frequency Weight: 10% (more vulnerabilities per asset increase priority)
+Sort the Output File by Descending Priority Score
+
+Hide Due Date Score and Asset Score Columns in the Output
+
+Keep Only the Highest Priority Vulnerability Per Asset Name and Package Name
