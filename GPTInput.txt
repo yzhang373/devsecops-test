@@ -1,24 +1,31 @@
-Fix CVSS Scores where they are 0 based on Severity
+**"Read in the attached file.
+For any CVSS that equals 0, IF Severity Critical, assign CVSS 9.0, High 7.0, Medium 4.0, Low 2.0
+For any CVSS between 9 and 10, ensure Severity is Critical, 7 and 9 High, 4 and 7 Medium, 2 and 4 Low, 0 and 2 Informational
+Generate a score for each line item vulnerability:
+CVSS highest weight 70%
+Due Date (earliest higher priority) 20%
+Asset Name (if there are more vulnerabilities per asset, prioritize) 10%
 
-If CVSS is 0, assign a score based on Severity:
-Critical: 9.0
-High: 7.0
-Medium: 4.0
-Low: 2.0
-Ensure Severity Aligns with CVSS Ranges
+Return file with same columns plus Calculated Priority Score (from above)"**
 
-Critical: 9–10
-High: 7–9
-Medium: 4–7
-Low: 2–4
-Informational: 0–2
-Calculate Priority Score
+"Generate python script for this above requirements"
 
-CVSS Weight: 70% → Later Updated to 100%
-Due Date Weight: 20% (earlier dates get higher priority)
-Asset Frequency Weight: 10% (more vulnerabilities per asset increase priority)
-Sort the Output File by Descending Priority Score
+"Sort output file by descending priority score"
 
-Hide Due Date Score and Asset Score Columns in the Output
+"Use this file. Generate a top 100 to preview" (after uploading a new file)
 
-Keep Only the Highest Priority Vulnerability Per Asset Name and Package Name
+"Update the CVSS multiplier to 1.0"
+
+"Run the input file and generate the full output"
+
+"In results file, hide due date score and asset score columns"
+
+"In all cases where Asset name and Package name match, only show the vulnerability line item with the highest Calculated Priority Score"
+
+"Run the input file and generate full output file" (after uploading a new file)
+
+"Run same script for following file:" (after uploading another file)
+
+"Update script to reflect if CVSS in the input is blank, assume it is 0, then update it based on the severity level"
+
+"Run the most recent input file with this script"
