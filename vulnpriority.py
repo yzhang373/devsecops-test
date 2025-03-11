@@ -3,6 +3,7 @@ import pandas as pd
 def adjust_cvss_scores(df):
     """
     Adjusts CVSS scores:
+    - If CVSS is blank, assume it is 0.
     - If CVSS is 0, assign a score based on Severity.
     - Ensures CVSS aligns with severity range.
     """
@@ -13,6 +14,7 @@ def adjust_cvss_scores(df):
         "Low": 2.0,
     }
     
+    df["CVSS"].fillna(0, inplace=True)  # Assume blank CVSS is 0
     df.loc[df["CVSS"] == 0, "CVSS"] = df.loc[df["CVSS"] == 0, "Severity"].map(severity_cvss_mapping)
     
     severity_ranges = {
